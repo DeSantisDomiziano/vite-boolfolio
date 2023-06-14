@@ -26,6 +26,10 @@ export default {
             console.log(resp.data.projects)
             this.projects = resp.data.projects
          })
+      },
+
+      get_img(img) {
+         return this.API + this.img_path + img
       }
    },
 
@@ -44,7 +48,7 @@ export default {
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
          <div v-for="project in projects" class="col">
             <div class="card h-100">
-               <img class="card-img-top" src="" alt="">
+               <img class="card-img-top" :src="get_img(project.img_path)" alt="">
                <div class="card-body">
                   <h2>
                      {{ project.title }}
