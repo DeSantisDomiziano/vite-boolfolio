@@ -6,35 +6,24 @@ export default {
 
 <template>
    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-      <div class="container">
-         <a class="navbar-brand" href="#">Navbar</a>
+      <div class="container text-center">
          <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
-         <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+         <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavId">
+            <ul class="navbar-nav">
                <li class="nav-item">
-                  <a class="nav-link active" href="#" aria-current="page">Home <span
-                        class="visually-hidden">(current)</span></a>
+                  <router-link class="nav-link" :to="{ name: 'home' }" aria-current="page">About Me <span class="visually-hidden">(current)</span></router-link>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <router-link class="nav-link" :to="{ name: 'projects' }">Projects</router-link>
                </li>
-               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                     aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownId">
-                     <a class="dropdown-item" href="#">Action 1</a>
-                     <a class="dropdown-item" href="#">Action 2</a>
-                  </div>
+               <li class="nav-item">
+                  <router-link class="nav-link" :to="{ name: 'contact' }">Contacts</router-link>
                </li>
             </ul>
-            <form class="d-flex my-2 my-lg-0">
-               <input class="form-control me-sm-2" type="text" placeholder="Search">
-               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
          </div>
       </div>
    </nav>
