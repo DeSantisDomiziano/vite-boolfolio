@@ -30,7 +30,6 @@ export default {
    },
 
    mounted() {
-      console.log(this.API + this.API_PROJECTS);
       this.get_projects(this.API + this.API_PROJECTS)
    }
 }
@@ -51,12 +50,15 @@ export default {
                      {{ project.overview }}
                   </p>
                </div>
-               <div class="card-footer d-flex justify-content-between">
+               <div class="card-footer d-flex justify-content-between px-2">
                   <p>
-                     {{ project.link_code }}
+                     <a :href="project.link_code">Link Code</a>
                   </p>
+                  <router-link :to="{ name: 'single-project', params: { slug: project.slug } }" class="btn btn-primary mt-5">
+                     Show Project
+                  </router-link>
                   <p>
-                     {{ project.link_code }}
+                     <a :href="project.link_website">Link WebSite</a>
                   </p>
                </div>
             </div>
