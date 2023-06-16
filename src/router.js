@@ -3,6 +3,7 @@ import AboutMe from "./pages/AboutPage.vue";
 import ProjectsPage from "./pages/ProjectsPage.vue";
 import ProjectPage from "./pages/ProjectPage.vue";
 import ContactPage from "./pages/ContactPage.vue";
+import NotFound from "./pages/NotFound.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -23,9 +24,14 @@ const router = createRouter({
       component: ContactPage,
     },
     {
-        path: "/project/:slug",
-        name: "single-project",
-        component: ProjectPage,
+      path: "/project/:slug",
+      name: "single-project",
+      component: ProjectPage,
+    },
+    { 
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: NotFound 
     },
   ]
 });
