@@ -25,6 +25,7 @@ export default {
       },
 
       get_img(img) {
+         console.log(img);
          return this.API + this.img_path + img
       }
    },
@@ -68,4 +69,6 @@ export default {
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>

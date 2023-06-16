@@ -20,7 +20,6 @@ export default {
             .get(url)
             .then(resp => {
                 if (resp.data.success) {
-                   console.log(resp.data.project);
                    this.project = resp.data.project
                 }else {
                     console.log('nada')
@@ -60,9 +59,6 @@ export default {
                   <p>
                      <a :href="project.link_code">Link Code</a>
                   </p>
-                  <a :to="{ name: 'single-project', params: { slug: project.slug } }" class="btn btn-primary mt-5">
-                     Show Project
-                  </a>
                   <p>
                      <a :href="project.link_website">Link WebSite</a>
                   </p>
