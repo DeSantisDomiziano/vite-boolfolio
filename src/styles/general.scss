@@ -1,2 +1,15 @@
+@use './partials/active.scss';
+@use './partials/variables.scss' as *;
+
 // Import all of Bootstrap's CSS
 @import "/node_modules/bootstrap/scss/bootstrap";
+
+body {
+    /* font-family: 'Rubik Glitch', cursive; */
+    font-family: 'Space Grotesk', sans-serif;
+    color: $light !important;
+
+    a {
+        color: $light !important;
+    }
+}
