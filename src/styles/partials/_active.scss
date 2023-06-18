@@ -1,7 +1,7 @@
 @use './variables' as *;
 
 .active {
-    font-size: 1.3rem;
+    font-size: 2rem;
     font-family: 'Rubik Glitch', cursive;
     letter-spacing: 3px;
     position: relative;
@@ -15,7 +15,7 @@
         top: 8px;
         left: 0;
         overflow: hidden;
-        font-size: 1.3rem;
+        font-size: 2rem;
         color: $dark !important;
         font-family: 'Rubik Glitch', cursive;
     }

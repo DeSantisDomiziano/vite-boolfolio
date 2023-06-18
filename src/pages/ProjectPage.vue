@@ -19,6 +19,7 @@ export default {
 
 
 <template>
+   <span class="star" v-for="i in 10"></span>
     <div class="container py-5 text-center">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
             <div class="card h-100 px-0 m-auto" v-if="store.project">

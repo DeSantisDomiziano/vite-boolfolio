@@ -18,6 +18,7 @@ export default {
 
 
 <template>
+   <span class="star" v-for="i in 10"></span>
    <div class="container py-5">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
          <div v-for="project in store.projects" class="col">

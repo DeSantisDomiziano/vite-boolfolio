@@ -1,5 +1,6 @@
-@use './partials/active.scss';
 @use './partials/variables.scss' as *;
+@use './partials/active.scss';
+@use './partials/star.scss';
 
 // Import all of Bootstrap's CSS
 @import "/node_modules/bootstrap/scss/bootstrap";
@@ -8,6 +9,10 @@ body {
     /* font-family: 'Rubik Glitch', cursive; */
     font-family: 'Space Grotesk', sans-serif;
     color: $light !important;
+
+    background: url(../assets/img/bg-universe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     a {
         color: $light !important;

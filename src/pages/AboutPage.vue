@@ -5,14 +5,17 @@
 </script>
 
 <template>
-    <div>
-        <h1>
-            about
-        </h1>
-    </div>
+    <section >
+        <div class="container">
+
+            <h1>
+                about
+            </h1>
+            <span class="star" v-for="i in 10"></span>
+        </div>
+    </section>
 </template>
 
 
 <style lang="scss" scoped>
-
 </style>

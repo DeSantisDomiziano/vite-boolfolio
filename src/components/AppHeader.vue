@@ -46,8 +46,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
-
-
+.navbar {
+   height: 80px !important;
+   font-size: 1.5rem;
+}
 
 </style>

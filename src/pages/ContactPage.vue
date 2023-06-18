@@ -5,6 +5,7 @@
 </script>
 
 <template>
+    <span class="star" v-for="i in 10"></span>
     <div>
         <h1>
             contact
