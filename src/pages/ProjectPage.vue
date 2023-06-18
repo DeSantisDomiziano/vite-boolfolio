@@ -1,42 +1,18 @@
 <script>
 import axios from "axios";
+import { store } from "../store";
 
 export default {
    name: 'ProjectsPage',
 
    data() {
       return {
-         loading: true,
-         API: 'http://127.0.0.1:8000/',
-         API_PROJECTS: 'api/projects',
-         img_path: 'storage/',
-         project: null,
-      }
-   },
-
-   methods: {
-      get_projects(url) {
-         axios
-            .get(url)
-            .then(resp => {
-                if (resp.data.success) {
-                   this.project = resp.data.project
-                }else {
-                    console.log('nada')
-                    this.$router.push({
-                        name: 'not-found',
-                    }) 
-                }
-            })
-      },
-
-      get_img(img) {
-         return this.API + this.img_path + img
+         store
       }
    },
 
    mounted() {
-       this.get_projects(this.API + this.API_PROJECTS  + "/" + this.$route.params.slug)        
+       store.get_single_project(store.API + store.API_PROJECTS  + "/" + this.$route.params.slug)        
    }
 }
 </script>
@@ -45,22 +21,22 @@ export default {
 <template>
     <div class="container py-5 text-center">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-            <div class="card h-100 px-0 m-auto" v-if="project">
-               <img class="card-img-top" :src="get_img(project.img_path)" alt="">
+            <div class="card h-100 px-0 m-auto" v-if="store.project">
+               <img class="card-img-top" :src="store.get_img(store.project.img_path)" alt="">
                <div class="card-body">
                   <h2>
-                     {{ project.title }}
+                     {{ store.project.title }}
                   </h2>
                   <p>
-                     {{ project.overview }}
+                     {{ store.project.overview }}
                   </p>
                </div>
                <div class="card-footer d-flex justify-content-between px-2">
                   <p>
-                     <a :href="project.link_code">Link Code</a>
+                     <a :href="store.project.link_code">Link Code</a>
                   </p>
                   <p>
-                     <a :href="project.link_website">Link WebSite</a>
+                     <a :href="store.project.link_website">Link WebSite</a>
                   </p>
                </div>
             </div>

@@ -7,7 +7,7 @@
 <template>
     <div>
         <h1>404 | NOT FOUND</h1>
-        <router-link :to="{ name: 'about' } "> torna a casa </router-link>
+        <router-link :to="{ name: 'home' } "> torna a casa </router-link>
     </div>
 </template>
 
