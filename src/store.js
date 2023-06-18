@@ -9,6 +9,7 @@ export const store = reactive({
     img_path: 'storage/',
     projects: null,
     project: null,
+    active: 1,
 
     /* METHODS */
     get_all_projects(url) {
@@ -39,8 +40,12 @@ export const store = reactive({
            })
     },
 
-     get_img(img) {
-        console.log(img);
-        return this.API + this.img_path + img
-     }
+    get_img(img) {
+    console.log(img);
+    return this.API + this.img_path + img
+    },
+
+    active_nav(id) {
+        this.active = id
+    }
 })
